@@ -109,6 +109,18 @@ body {
     align-self: center;
 }
 
+.link-footer a {
+    transition: all .4s ease;
+}
+
+.link-footer a:not(:first-of-type) {
+    margin-left: 16px;
+}
+
+.link-footer a:hover {
+    text-shadow: #e63f34 0 0 4px;
+}
+
 .button-footer {
     display: flex;
     align-items: center;
@@ -118,13 +130,20 @@ body {
 .button-footer a{
     height: 32px;
     width: 32px;
-    border: 1px solid black;
+    border: 1px solid gray;
     display: flex;
     border-radius: 16px;
     justify-content: center;
     align-items: center;
+    color: gray;
+    transition: all .4s ease;
 }
 
 .button-footer a:not(:first-of-type) {
     margin-left: 16px;
+}
+
+.button-footer a:hover {
+    box-shadow: #e63f34 0 0 4px;
+    text-shadow: #e63f34 0 0 4px;
 }
