@@ -1,0 +1,69 @@
+@font-face {
+    font-family: "Slate";
+    src: url("./fonts/SlateForOnePlus-Regular.ttf") format("truetype");
+}
+
+body {
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.elevation-1 {
+    box-shadow: 0 0 10px black;
+}
+
+#header {
+    width: 1320px;
+    height: 48px;
+    top: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+    border-radius: 0px 0px 25px 25px;
+    display: flex;
+}
+
+#footer {
+    width: 1920px;
+    height: 48px;
+    bottom: 0;
+    position: absolute;
+}
+
+#brand {
+    font-size: 1.6em;
+    font-family: "Slate";
+    text-transform: uppercase;
+    transition: all .4s ease;
+    align-self: center;
+}
+
+#brand:hover {
+    text-shadow: red 0 0 4px;
+}
+
+.button-header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: auto;
+}
+
+.button-header + .button-header::before {
+    content: "";
+    top: 25%;
+    height: 50%;
+    width: 1px;
+    background: black;
+    margin-right: 10px;
+}
+
+.button-header:not(:first-of-type) {
+    margin-left: 10px;
+}
+
+.button-header p {
+    font-family: "Slate";
+    text-transform: uppercase;
+}
