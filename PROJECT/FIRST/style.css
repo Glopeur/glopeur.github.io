@@ -3,6 +3,10 @@
     src: url("./fonts/SlateForOnePlus-Regular.ttf") format("truetype");
 }
 
+html {
+    scrollbar-width: none;
+}
+
 body {
     background: #ffffff;
     margin: 0;
@@ -16,19 +20,18 @@ body {
 #header {
     width: 1320px;
     height: 48px;
-    top: 0;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
     margin: auto;
     border-radius: 0px 0px 25px 25px;
     display: flex;
 }
 
 #footer {
-    width: 1920px;
     height: 48px;
-    bottom: 0;
-    position: absolute;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: flex;
 }
 
 #brand {
@@ -39,31 +42,89 @@ body {
     align-self: center;
 }
 
+#brand a:link {
+    text-decoration: none;
+    color: black;
+}
+
+#brand a:visited {
+    color: black;
+}
+
 #brand:hover {
-    text-shadow: red 0 0 4px;
+    text-shadow: #e63f34 0 0 4px;
 }
 
 .button-header {
     display: flex;
     align-items: center;
-    position: relative;
     margin-left: auto;
+    color: gray;
 }
 
-.button-header + .button-header::before {
+.button-header a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-header a:active {
+    color: #a91b1b;
+}
+
+.button-header a + a::before {
     content: "";
-    top: 25%;
+    padding-top: 25%;
     height: 50%;
     width: 1px;
     background: black;
     margin-right: 10px;
 }
 
-.button-header:not(:first-of-type) {
+.button-header a:first-of-type {
+    margin-left: auto;
+}
+
+.button-header a:not(:first-of-type) {
     margin-left: 10px;
 }
 
-.button-header p {
+.button-header a:not(:active) {
+    transition: all .4s ease;
+}
+
+.button-header a:not(:active):hover {
+    text-shadow: #e63f34 0 0 4px;
+}
+
+.button-header a p {
+    margin-left: 4px;
     font-family: "Slate";
     text-transform: uppercase;
+}
+
+.link-footer {
+    color: gray;
+    display: flex;
+    align-self: center;
+}
+
+.button-footer {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.button-footer a{
+    height: 32px;
+    width: 32px;
+    border: 1px solid black;
+    display: flex;
+    border-radius: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-footer a:not(:first-of-type) {
+    margin-left: 16px;
 }
